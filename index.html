@@ -120,15 +120,43 @@
           </div>
         </div>
         <div class="col">
-          <div class="card h-100 text-center bg-black rounded-0 border-0">
-            <div class="card-body py-4">
-              <h4 class="card-title text-white"> Lionel Messi</h4>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+          <div class="card h-100 bg-black rounded-0 border-0">
+            <div class="card-body p-4 text-light">
+              <h5 class="card-title text-white border-bottom text-center mb-3">Budget</h5>
+              
+              <div class="mb-3 row">
+                <label for="" class="col col-form-label text-light">Per Player</label>
+                <div class="col mt-2">
+                    <input type="text" class="w-75 bg-black border text-white" placeholder="10000">
+                </div>
+              </div>
+
+              <button class="btn btn-primary rounded-0 w-100 my-2">Calculate</button>
+              <p class="mt-3">Player Expenses: $5000</p>
+              <div class="mb-3 row">
+                <label for="" class="col col-form-label text-light">Manager</label>
+                <div class="col mt-2">
+                    <input type="text" class="w-75 bg-black border text-white" placeholder="20000">
+                </div>
+              </div>
+              <div class="mb-4 row">
+                <label for="" class="col col-form-label text-light">Coach</label>
+                <div class="col mt-2">
+                    <input type="text" class="w-75 bg-black border text-white" placeholder="40000">
+                </div>
+              </div>
+              <button class="btn btn-primary w-100 rounded-0">Calculate Total</button>
+              <p class="mt-4"><span class="me-5">Total </span> <span class="ms-5 text-warning me-0"> $11000</span></p>
             </div>
           </div>
         </div>
       </div>
     </main>
+
+    <footer class="bg-dark py-4 border-top">
+      <p class="text-center text-light">Copyright @ 2022 All Rights Reserved.</p>
+    </footer>
+
     <script src="js/app.js"></script>
 </body>
 </html>
