@@ -48,10 +48,43 @@ document.getElementById('btn-calculate').addEventListener('click', function(){
 
     const currentPlayerExpensesTotal = perPlayerAmount * 5;
     playerExpensesElement.innerText = currentPlayerExpensesTotal;
-    console.log(currentPlayerExpensesTotal);
 
 
     perPlayerField.value = '';
+})
+
+        //------ calculate-total-btn -------//
+//Step-1
+document.getElementById('calculate-total-btn').addEventListener('click', function(){
+    const coachFieldInput = document.getElementById('coach-field');
+    const coachFieldString = coachFieldInput.value;
+    const coachFieldAmount = parseFloat(coachFieldString);
+//step-2
+
+    const managerFieldInput = document.getElementById('manager-field');
+    const managerFieldString = managerFieldInput.value;
+    const managerFieldAmount = parseFloat(managerFieldString);
+
+    const previousTotalAmount = managerFieldAmount + coachFieldAmount;
+//step-3
+
+    const playerExpensesElement = document.getElementById('player-expenses');
+    const playerExpensesTotalString = playerExpensesElement.innerText;
+    const playerExpensesTotal = parseFloat(playerExpensesTotalString);
+
+    const subTotal = playerExpensesTotal + previousTotalAmount;
+//step-4
+
+    const totalCostElement = document.getElementById('total-cost');
+    const totalCostElementString = totalCostElement.innerText;
+    const totalCostElementAmount = parseFloat(totalCostElementString);
+
+    const totalCostAmount = totalCostElementAmount + subTotal;
+
+    totalCostElement.innerText = totalCostAmount;
+    
+    coachFieldInput.value = '';
+    managerFieldInput.value = '';
 })
 
 //--------- Budget End ----------//
