@@ -24,7 +24,7 @@
               <div class="col-6 align-self-center">
                 <div class="px-4">
                     <h1 class="display-3 mb-4" style="font-family: 'Berkshire Swash', cursive; color: #FF5E19">Select your favorite player</h1>
-                    <p class="text-light">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                    <p class="text-light">The Best FIFA Men's Player 2020 scored 41 league goals a record for a Bundesliga season as his club won the title again, adding to a FIFA Club World Cup win. He was also prolific for Poland, scoring three goals in three matches at UEFA EURO 2020.</p>
                 </div>
               </div>
 
@@ -41,6 +41,7 @@
     </header>
 
     <main class="bg-dark py-5">
+      <!------------------- Card Start ---------------->
       <div class="row row-cols-1 row-cols-md-4 g-4 container mx-auto">
         <div class="col">
           <div class="card h-100 text-center bg-black rounded-0 border-secondary">
@@ -48,7 +49,7 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white"> Lionel Messi</h4>
               <p class="card-text text-light"><span class="me-2">36 Goals</span> . <span class="ms-2">120 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
@@ -58,7 +59,7 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white">Neymar Jr</h4>
               <p class="card-text text-light"><span class="me-2">30 Goals</span> . <span class="ms-2">100 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
@@ -68,24 +69,22 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white">Kylian Mbappé</h4>
               <p class="card-text text-light"><span class="me-2">32 Goals</span> . <span class="ms-2">110 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
+
+         <!------------------- Selected-v Start ---------------->
+
         <div class="col">
-          <div class="card h-100 text-center bg-black rounded-0 border-0">
+          <div class="card h-100 bg-black rounded-0 border-0">
             <div class="card-body py-4">
-              <h5 class="card-title text-white border-bottom">Selected-V</h5>
-              <ol class="text-light">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ol>
+              <h5 class="card-title text-white border-bottom  text-center">Selected-V</h5>
+              <div id="select-products" class="text-light"></div>
             </div>
           </div>
         </div>
+        <!------------------- Selected-v End ---------------->
       </div>
 
       <div class="row row-cols-1 row-cols-md-4 g-4 container mx-auto mt-1">
@@ -95,7 +94,7 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white">Vítor Machado</h4>
               <p class="card-text text-light"><span class="me-2">25 Goals</span> . <span class="ms-2">130 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
@@ -105,7 +104,7 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white">Sergio Ramos</h4>
               <p class="card-text text-light"><span class="me-2">22 Goals</span> . <span class="ms-2">108 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
@@ -115,10 +114,13 @@
             <div class="card-body py-4">
               <h4 class="card-title text-white">Renato Sanches</h4>
               <p class="card-text text-light"><span class="me-2">27 Goals</span> . <span class="ms-2">103 Assist</span></p>
-              <button class="btn btn-success px-4 rounded-0">SELECT</button>
+              <button onclick="addToCart(this)" class="btn btn-success px-4 rounded-0">SELECT</button>
             </div>
           </div>
         </div>
+
+        <!---------------------- Budget Start --------------------->
+
         <div class="col">
           <div class="card h-100 bg-black rounded-0 border-0">
             <div class="card-body p-4 text-light">
@@ -150,7 +152,9 @@
             </div>
           </div>
         </div>
+        <!---------------------- Budget End ------------------->
       </div>
+      <!------------------- Card End ---------------->
     </main>
 
     <footer class="bg-dark py-4 border-top">
