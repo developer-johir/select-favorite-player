@@ -1,3 +1,4 @@
+//--------- Player Slected Start ----------//
 const selectArray = [];
 
 function display(selectProduct){
@@ -26,5 +27,31 @@ function addToCart(element){
     }
 
     selectArray.push(productObj);
+
+    document.getElementById('total-add-product').innerText = selectArray.length;
+
     display(selectArray);
 }
+//--------- Player Slected End ----------//
+
+
+//--------- Budget Start ----------//
+
+document.getElementById('btn-calculate').addEventListener('click', function(){
+    const perPlayerField = document.getElementById('per-player');
+    const perPlayerAmountString = perPlayerField.value;
+    const perPlayerAmount = parseFloat(perPlayerAmountString);
+
+    const playerExpensesElement = document.getElementById('player-expenses');
+    const playerExpensesTotalString = playerExpensesElement.innerText;
+    const playerExpensesTotal = parseFloat(playerExpensesTotalString);
+
+    const currentPlayerExpensesTotal = perPlayerAmount * 5;
+    playerExpensesElement.innerText = currentPlayerExpensesTotal;
+    console.log(currentPlayerExpensesTotal);
+
+
+    perPlayerField.value = '';
+})
+
+//--------- Budget End ----------//
